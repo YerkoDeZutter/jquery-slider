@@ -29,4 +29,10 @@ $("#right").click(function() {
   nextImg()
 });
 
+$("#left").click(function() {
+  imgCount -= 2
+  reset = true;
+  nextImg()
+});
+
 nextImg()
