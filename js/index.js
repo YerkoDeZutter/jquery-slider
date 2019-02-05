@@ -1,9 +1,5 @@
 let imgCount = 1;
-
-let imgChange = "";
-
 let reset = false;
-
 let timeoutHandle;
 
 function nextImg() {
