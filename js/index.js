@@ -4,6 +4,8 @@ let imgChange = "";
 
 let reset = false;
 
+let timeoutHandle;
+
 function nextImg() {
 
   if (imgCount <= 5) {
@@ -16,10 +18,11 @@ function nextImg() {
 
   console.log(imgCount);
   if (reset) {
-    clearTimeout(timeoutHandle)
+    clearTimeout(timeoutHandle);
     reset = false;
+    timeoutHandle = setTimeout(nextImg, 5000);
   } else {
-    var timeoutHandle = setTimeout(nextImg, 5000);
+    timeoutHandle = setTimeout(nextImg, 5000);
   }
 }
 
