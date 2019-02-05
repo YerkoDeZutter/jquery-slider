@@ -15,7 +15,6 @@ function nextImg() {
   }
 
   console.log(imgCount);
-
   if (reset) {
     clearTimeout(timeoutHandle)
     reset = false;
@@ -30,7 +29,13 @@ $("#right").click(function() {
 });
 
 $("#left").click(function() {
+  if(imgCount >= 2){
   imgCount -= 2
+} else if(imgCount == 0) {
+  imgCount = 5;
+} else {
+  imgCount = 6;
+}
   reset = true;
   nextImg()
 });
